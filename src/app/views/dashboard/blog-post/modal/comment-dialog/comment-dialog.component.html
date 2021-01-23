@@ -1,0 +1,20 @@
+<h3>Write a comment</h3>
+<br /><br />
+<form [formGroup]="commentForm">
+  <mat-form-field style="width: 550px">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput formControlName="comment" rows="5" cols="100"></textarea>
+  </mat-form-field>
+  <br /><br />
+</form>
+
+<mat-dialog-actions align="end">
+  <button
+    type="button"
+    class="btn btn-block btn-info"
+    (click)="saveComment()"
+    style="width: 80px"
+  >
+    Save
+  </button>
+</mat-dialog-actions>

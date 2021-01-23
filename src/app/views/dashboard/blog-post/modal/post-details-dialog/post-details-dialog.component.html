@@ -1,0 +1,29 @@
+<mat-card *ngIf="showLoading">
+  <mat-card-content>
+    <h2 class="example-h2">Result</h2>
+    <mat-progress-spinner
+      class="example-margin"
+      [color]="color"
+      [mode]="mode"
+      [value]="value"
+    >
+    </mat-progress-spinner>
+  </mat-card-content>
+</mat-card>
+
+<h2 mat-dialog-title>{{ data.post.postTitle }}</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>{{ data.post.postDescription }}</h3>
+</mat-dialog-content>
+<h5>Comments:</h5>
+<div *ngFor="let c of comments">
+  <mat-card>
+    <mat-card-content>
+      <h6>{{ c.comment }}</h6>
+    </mat-card-content>
+  </mat-card>
+  <br />
+</div>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
